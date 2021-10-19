@@ -1,5 +1,7 @@
 import java.util.Scanner;
 import java.math.*;
+import java.time.LocalTime;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
 //TODO: add stat roller, add background and name, add value checks, add player export
@@ -13,8 +15,41 @@ public class Main {
         int intl;
         int cha;
 
+        //Dice properties TODO: move all of this into new dice class with roll(d20) methods ect ect
 
-        //TODO: Fix negative number modifier math
+        //LocalTime for dice roll calls
+        LocalTime time = LocalTime.now();
+
+        //d20
+        int dTwentyMin = 1;
+        int dTwentyMax = 20;
+        int dTwentyRoll = ThreadLocalRandom.current().nextInt(dTwentyMin,dTwentyMax+1);
+
+        //d12
+        int dTwelveMin = 1;
+        int dTwelveMax = 12;
+        int dTwelveRoll = ThreadLocalRandom.current().nextInt(dTwelveMin,dTwelveMax+1);
+
+        //d10
+        int dTenMin = 1;
+        int dTenMax = 10;
+        int dTenRoll = ThreadLocalRandom.current().nextInt(dTenMin,dTenMax+1);
+
+        //d8
+        int dEightMin = 1;
+        int dEightMax = 8;
+        int dEightRoll = ThreadLocalRandom.current().nextInt(dEightMin,dEightMax+1);
+
+        //d6
+        int dSixMin = 1;
+        int dSixMax = 6;
+        int dSixRoll = ThreadLocalRandom.current().nextInt(dSixMin,dSixMax+1);
+
+        //d4
+        int dFourMin = 1;
+        int dFourMax = 4;
+        int dFourRoll = ThreadLocalRandom.current().nextInt(dFourMin,dFourMax+1);
+
         //Statblock generation TODO: Store these in array , also store roll values and ask player what value to bestow where, show what values are left
 
         //Strength
